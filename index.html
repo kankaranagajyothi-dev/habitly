@@ -1,51 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Habitly</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      font-family: Arial, sans-serif;
-      color: #18312b;
-      background: linear-gradient(135deg, #e8f7ef, #f5f1ff);
-    }
-    main {
-      width: min(100%, 620px);
-      padding: 48px 28px;
-      text-align: center;
-      background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 16px 45px rgba(25, 55, 45, 0.12);
-    }
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2.5rem, 8vw, 4rem);
-    }
-    p {
-      margin: 0;
-      color: #5d716a;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .tag {
-      margin-top: 24px;
-      color: #287a58;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitly - Daily Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Habitly</h1>
-    <p>Small habits. Big progress.</p>
-    <p class="tag">Created by: Naga Jyothi Kankara</p>
-  </main>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="logo">🌱 Habitly</h1>
+        <p class="date">Sunday, 15 November</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h2>Good morning! 👋</h2>
+            <p>Build better habits, one day at a time.</p>
+        </section>
+
+        <!-- Summary Statistics -->
+        <section class="stats">
+            <article class="stat-card">
+                <h3>Done Today</h3>
+                <p class="stat-value">3/5</p>
+            </article>
+
+            <article class="stat-card">
+                <h3>Best Streak</h3>
+                <p class="stat-value">12 Days</p>
+            </article>
+
+            <article class="stat-card">
+                <h3>This Week</h3>
+                <p class="stat-value">78%</p>
+            </article>
+        </section>
+
+        <!-- Habit Cards -->
+        <section class="habits">
+            <h2>My Daily Habits</h2>
+
+            <div class="habit-grid">
+
+                <article class="habit-card">
+                    <span class="habit-emoji">📚</span>
+                    <h3>Read Books</h3>
+                    <p class="streak">🔥 7 day streak</p>
+                    <button type="button">Complete</button>
+                </article>
+
+                <article class="habit-card">
+                    <span class="habit-emoji">💧</span>
+                    <h3>Drink Water</h3>
+                    <p class="streak">🔥 12 day streak</p>
+                    <button type="button">Complete</button>
+                </article>
+
+                <article class="habit-card">
+                    <span class="habit-emoji">🏃</span>
+                    <h3>Daily Exercise</h3>
+                    <p class="streak">🔥 5 day streak</p>
+                    <button type="button">Complete</button>
+                </article>
+
+                <article class="habit-card">
+                    <span class="habit-emoji">💻</span>
+                    <h3>Learn Coding</h3>
+                    <p class="streak">🔥 4 day streak</p>
+                    <button type="button">Complete</button>
+                </article>
+
+                <article class="habit-card">
+                    <span class="habit-emoji">🌙</span>
+                    <h3>Sleep Early</h3>
+                    <p class="streak">🔥 6 day streak</p>
+                    <button type="button">Complete</button>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Built with the CodGen Frontend Internship | codgen.in</p>
+    </footer>
+
 </body>
 </html>
