@@ -5,92 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habitly - Daily Habit Tracker</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Header -->
     <header class="header">
-        <h1 class="logo">🌱 Habitly</h1>
-        <p class="date">Sunday, 15 November</p>
+        <h1>Habitly 🌱</h1>
+        <p id="currentDate"></p>
     </header>
 
     <main class="container">
 
         <!-- Welcome Section -->
         <section class="welcome">
-            <h2>Good morning! 👋</h2>
-            <p>Build better habits, one day at a time.</p>
+            <h2 id="greeting">Welcome back! 👋</h2>
+            <p>Small steps every day lead to big changes.</p>
         </section>
 
-        <!-- Summary Statistics -->
+        <!-- Daily Quote -->
+        <section class="quote-card">
+            <h3>✨ Daily Motivation</h3>
+            <p id="quote">Loading your daily quote...</p>
+            <span id="quoteAuthor"></span>
+        </section>
+
+        <!-- Dashboard Statistics -->
         <section class="stats">
-            <article class="stat-card">
+
+            <div class="stat-card">
                 <h3>Done Today</h3>
-                <p class="stat-value">3/5</p>
-            </article>
+                <p id="doneToday">0/0</p>
+            </div>
 
-            <article class="stat-card">
+            <div class="stat-card">
                 <h3>Best Streak</h3>
-                <p class="stat-value">12 Days</p>
-            </article>
+                <p id="bestStreak">0 Days</p>
+            </div>
 
-            <article class="stat-card">
+            <div class="stat-card">
                 <h3>This Week</h3>
-                <p class="stat-value">78%</p>
-            </article>
+                <p id="weeklyProgress">0%</p>
+            </div>
+
         </section>
 
-        <!-- Habit Cards -->
-        <section class="habits">
-            <h2>My Daily Habits</h2>
+        <!-- Habit Section -->
+        <section class="habit-section">
 
-            <div class="habit-grid">
-
-                <article class="habit-card">
-                    <span class="habit-emoji">📚</span>
-                    <h3>Read Books</h3>
-                    <p class="streak">🔥 7 day streak</p>
-                    <button type="button">Complete</button>
-                </article>
-
-                <article class="habit-card">
-                    <span class="habit-emoji">💧</span>
-                    <h3>Drink Water</h3>
-                    <p class="streak">🔥 12 day streak</p>
-                    <button type="button">Complete</button>
-                </article>
-
-                <article class="habit-card">
-                    <span class="habit-emoji">🏃</span>
-                    <h3>Daily Exercise</h3>
-                    <p class="streak">🔥 5 day streak</p>
-                    <button type="button">Complete</button>
-                </article>
-
-                <article class="habit-card">
-                    <span class="habit-emoji">💻</span>
-                    <h3>Learn Coding</h3>
-                    <p class="streak">🔥 4 day streak</p>
-                    <button type="button">Complete</button>
-                </article>
-
-                <article class="habit-card">
-                    <span class="habit-emoji">🌙</span>
-                    <h3>Sleep Early</h3>
-                    <p class="streak">🔥 6 day streak</p>
-                    <button type="button">Complete</button>
-                </article>
-
+            <div class="section-heading">
+                <h2>My Habits 🎯</h2>
             </div>
+
+            <!-- Add Habit Form -->
+            <form id="habitForm" class="habit-form">
+
+                <input
+                    type="text"
+                    id="habitName"
+                    placeholder="Enter a new habit"
+                    maxlength="40"
+                    required
+                >
+
+                <!-- Emoji Dropdown -->
+                <select id="habitEmoji">
+
+                    <option value="🌟">🌟 Star</option>
+                    <option value="📚">📚 Books</option>
+                    <option value="💧">💧 Water</option>
+                    <option value="🏃">🏃 Exercise</option>
+                    <option value="💻">💻 Coding</option>
+                    <option value="🌙">🌙 Sleep</option>
+                    <option value="🚶">🚶 Walking</option>
+                    <option value="🧘">🧘 Meditation</option>
+                    <option value="🍎">🍎 Healthy Food</option>
+                    <option value="🎯">🎯 Goals</option>
+                    <option value="🎨">🎨 Art</option>
+                    <option value="✍️">✍️ Writing</option>
+                    <option value="🎵">🎵 Music</option>
+                    <option value="🏋️">🏋️ Fitness</option>
+                    <option value="❤️">❤️ Health</option>
+                    <option value="🌱">🌱 Growth</option>
+                    <option value="🧹">🧹 Cleaning</option>
+                    <option value="💰">💰 Saving</option>
+                    <option value="📝">📝 Study</option>
+                    <option value="🚴">🚴 Cycling</option>
+
+                </select>
+
+                <button type="submit">+ Add Habit</button>
+
+            </form>
+
+            <!-- Habits Display -->
+            <div class="habit-grid" id="habitGrid"></div>
+
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>Built with the CodGen Frontend Internship | codgen.in</p>
+    <footer>
+        <p>Made with 💚 | CodGen Frontend Internship</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
